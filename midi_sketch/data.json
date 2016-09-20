@@ -1,0 +1,36 @@
+spotify_NYU
+"nyu.edu": 172.16.232.2
+"nyu.edu.2": 128.122.1.97
+"nyu.edu.3": 128.122.1.36
+
+
+Hot Spot Sound cloud
+172.20.10.1
+172.26.96.161
+172.18.112.164
+172.18.112.188
+12.249.2.33
+12.83.172.162
+ATT.net  (12.122.105.13)
+192.205.32.162
+72.21.91.127
+
+
+SS_Facebook
+ 1  [AS0] 192.168.0.1 (192.168.0.1)  4.801 ms  7.191 ms  7.450 ms
+  3  [AS12271] tge-0-10-0-29.nydbny7001h.nyc.rr.com (68.173.218.5)  28.525 ms  29.767 ms  30.040 ms
+ 4  [AS12271] agg111.nyclnyrg01r.nyc.rr.com (68.173.198.104)  33.168 ms  28.296 ms  41.432 ms
+ 5  [AS19548] bu-ether19.nwrknjmd67w-bcr00.tbone.rr.com (66.109.6.78)  33.958 ms  29.305 ms  29.984 ms
+ 6  [AS19548] bu-ether12.nycmny837aw-bcr00.tbone.rr.com (66.109.6.27)  70.344 ms  59.908 ms  59.880 ms
+ 7  [AS19548] bu-ether12.chcgildt87w-bcr00.tbone.rr.com (66.109.6.25)  61.776 ms  58.372 ms  60.248 ms
+ 8  [AS7843] 0.ae1.pr1.chi10.tbone.rr.com (107.14.17.194)  61.444 ms
+    [AS19548] 0.ae4.pr1.chi10.tbone.rr.com (66.109.1.66)  61.485 ms  58.453 ms
+ 9  [AS7843] 24.27.236.131 (24.27.236.131)  60.849 ms  93.169 ms  53.330 ms
+10  [AS32934] be20.bb02.ord1.tfbnw.net (74.119.77.138)  140.496 ms  139.154 ms  151.983 ms
+11  [AS32934] ae7.bb03.atn1.tfbnw.net (31.13.28.28)  158.001 ms
+    [AS32934] be24.bb01.atn1.tfbnw.net (31.13.30.140)  160.628 ms
+    [AS32934] ae14.bb04.atn1.tfbnw.net (31.13.30.138)  160.254 ms
+12  [AS32934] ae3.dr06.atn1.tfbnw.net (74.119.76.99)  69.632 ms
+    [AS32934] ae5.dr03.atn2.tfbnw.net (74.119.77.75)  99.605 ms
+    [AS32934] ae0.dr08.atn1.tfbnw.net (74.119.76.51)  60.083 ms
+    18  [AS0] edge-star-mini-shv-13-atn1.facebook.com (173.252.90.36)  73.741 ms  58.019 ms  61.717 ms

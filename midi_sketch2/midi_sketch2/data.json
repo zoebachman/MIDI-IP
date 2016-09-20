@@ -1,0 +1,146 @@
+{
+  "Traceroutes": {
+    "Zoe to Facebook": [
+  {
+    "Hop": 1,
+    "Number": "* * *",
+    "Router": "",
+    "IP": "",
+    "Time": ""
+  },
+  {
+    "Hop": 2,
+    "Number": "[AS12271]",
+    "Router": "tge-0-10-0-31.nydbny7002h.nyc.rr.com",
+    "IP": "68.173.200.69",
+    "Time": "14.264 ms  16.505 ms  9.884 ms"
+  },
+  {
+    "Hop": 3,
+    "Number": "[AS12271]",
+    "Router": "agg111.nyquny9101r.nyc.rr.com",
+    "IP": "68.173.198.106",
+    "Time": "16.305 ms  27.661 ms  17.533 ms"
+  },
+  {
+    "Hop": 4,
+    "Number": "[AS19548]",
+    "Router": "66.109.3.218",
+    "IP": "66.109.3.218",
+    "Time": "18.266 ms  19.993 ms  15.756 ms"
+  },
+  {
+    "Hop": 5,
+    "Number": "[AS19548]",
+    "Router": "0.ae1.pr0.nyc20.tbone.rr.com",
+    "IP": "66.109.6.163",
+    "Time": "27.938 ms  10.642 ms  15.320 ms"
+  },
+  {
+    "Hop": 6,
+    "Number": "[AS7843]",
+    "Router": "24.27.236.107",
+    "IP": "24.27.236.107",
+    "Time": "20.686 ms  20.130 ms  15.999 ms"
+  },
+  {
+    "Hop": 7,
+    "Number": "[AS32934]",
+    "Router": "be8.bb02.ewr2.tfbnw.net",
+    "IP": "157.240.33.34",
+    "Time": "121.529 ms  121.619 ms  122.699 ms"
+  },
+  {
+    "Hop": 8,
+    "Number": "[AS32934]",
+    "Router": "ae34.bb03.dca1.tfbnw.net",
+    "IP": "157.240.33.96",
+    "Time": "119.840 ms"
+  },
+  {
+    "Hop": "",
+    "Number": "[AS32934]",
+    "Router": "be20.bb02.iad3.tfbnw.net",
+    "IP": "157.240.33.25",
+    "Time": "122.188 ms"
+  },
+  {
+    "Hop": "",
+    "Number": "[AS32934]",
+    "Router": "ae42.bb04.iad3.tfbnw.net",
+    "IP": "157.240.33.23",
+    "Time": "120.707 ms"
+  },
+  {
+    "Hop": 9,
+    "Number": "[AS32934]",
+    "Router": "ae28.bb03.frc3.tfbnw.net",
+    "IP": "31.13.30.118",
+    "Time": "133.190 ms"
+  },
+  {
+    "Hop": "",
+    "Number": "[AS32934]",
+    "Router": "ae3.bb05.frc3.tfbnw.net",
+    "IP": "31.13.24.204",
+    "Time": "134.411 ms"
+  },
+  {
+    "Hop": "",
+    "Number": "[AS32934]",
+    "Router": "ae36.bb04.frc3.tfbnw.net",
+    "IP": "31.13.31.81",
+    "Time": "135.012 ms"
+  },
+  {
+    "Hop": 10,
+    "Number": "[AS32934]",
+    "Router": "ae5.dr02.frc1.tfbnw.net",
+    "IP": "31.13.31.37",
+    "Time": "30.642 ms"
+  },
+  {
+    "Hop": "",
+    "Number": "[AS32934]",
+    "Router": "ae6.dr02.frc3.tfbnw.ne",
+    "IP": "31.13.29.201",
+    "Time": "32.353 ms *"
+  },
+  {
+    "Hop": 11,
+    "Number": "* * *",
+    "Router": "",
+    "IP": "",
+    "Time": ""
+  },
+  {
+    "Hop": 12,
+    "Number": "* * *",
+    "Router": "",
+    "IP": "",
+    "Time": ""
+  },
+  {
+    "Hop": 13,
+    "Number": "* * *",
+    "Router": "",
+    "IP": "",
+    "Time": ""
+  },
+  {
+    "Hop": 14,
+    "Number": "* * *",
+    "Router": "",
+    "IP": "",
+    "Time": ""
+  },
+ {
+    "Hop": 15,
+    "Number": "[AS0]",
+    "Router": "edge-star-mini-shv-07-frc3.facebook.com",
+    "IP": "66.220.158.68",
+    "Time": "35.977 ms  37.989 ms  34.251 ms"
+  }
+  ]
+}
+}

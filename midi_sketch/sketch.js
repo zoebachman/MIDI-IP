@@ -4,18 +4,15 @@
 //play tones
 
 
-//var notes1 = [60, 64, 67, 72];
-var notes = [194, 132, 197, 147];
+var notes = [];
+
+var j = 0;
 
 //declare array of oscillators
 var oscs = [];
 
 //number of oscillators
 var numOscs = 4;
-
-// var value = 25;
-//     var m = map(value, 0, 100, 0, width);
-//     ellipse(m, 50, 10, 10);
 
 
 //array for holding the mapped values from notes
@@ -29,36 +26,41 @@ function setup() {
   //initialize oscillators
   initOscs();
 
-  frameRate(1);
+  frameRate(100);
 
 }
-
-// function remap(){
-//   for (var i = 0; i < notes1; i++){
-//     var m = map(notes1[i], 0, 255, 21, 108)
-//   }
-// }
-
-// function map(x, in_min, in_max, out_min, out_max) {
-//   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-// }
-
 
 
 function draw() {
 
-  notes = [random(255), random(255), random(255), random(255)];
-  
+  //notes = [random(255), random(255), random(255), random(255)];
+  notes = [
+    [194, 132, 197, 147],
+    [172, 16, 232, 2],
+    [128, 122, 1, 97]
+  ];
+  //notesb = [172, 16, 232, 2];
+
   //clear arrays for midi notes and its frequencies
   midis = [];
   freqs = [];
 
-  //remap the values
+  //remap the values for midi
   for (var i = 0; i < notes.length; i++) {
     //append to the mappedValues array
     midis.push(map(notes[i], 0, 255, 0, 127));
     freqs.push(midiToFreq(midis[i]));
+    freqs.push(map(notes[i], 0, 255, 20, 2000));
+
   }
+
+  //values for frequency
+  // for (var i = 0; i < notes.length; i++) {
+  //   //append to the mappedValues array
+  //   //midis.push(map(notes[i], 0, 255, 0, 127));
+  //   //freqs.push(midiToFreq(midis[i]));
+  //   freqs.push(map(notesb[i], 0, 255, 20, 2000));
+  // }
 
 
   updateOscs();
