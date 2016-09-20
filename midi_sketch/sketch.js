@@ -6,8 +6,6 @@
 
 var notes = [];
 
-var j = 0;
-
 //declare array of oscillators
 var oscs = [];
 
@@ -34,12 +32,12 @@ function setup() {
 function draw() {
 
   //notes = [random(255), random(255), random(255), random(255)];
-  notes = [
-    [194, 132, 197, 147],
-    [172, 16, 232, 2],
-    [128, 122, 1, 97]
-  ];
-  //notesb = [172, 16, 232, 2];
+  notes = [194, 132, 197, 147];
+  //   [194, 132, 197, 147],
+  //   [172, 16, 232, 2],
+  //   [128, 122, 1, 97]
+  // ];
+
 
   //clear arrays for midi notes and its frequencies
   midis = [];

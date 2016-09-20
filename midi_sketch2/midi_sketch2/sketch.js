@@ -35,22 +35,24 @@ var oscs = [];
 var numOscs = 4;
 
 function setup() {
-
+  //initialize oscillators
   initOscs();
   frameRate(100);
 }
 
 function draw() {
-  midis = [];
-  freqs = [];
+
   //mapping happens here
   for (var i = 0; i < ipAddresses.length; i++) {
     for (var j = 0; j < ipAddresses[i].length; j++) {
-      //console.log(ipAddresses[i][0]);
       notes = mappedFreq(j);
-      console.log(notes); //got notes
+      //console.log(notes); //got notes
     }
   }
+  
+  midis = [];
+  freqs = [];
+  notes = [];
 
   updateOscs();
 }
@@ -69,7 +71,7 @@ function initOscs() {
     var osc;
     osc = new p5.Oscillator();
     osc.setType('sine');
-    osc.freq(440);
+    osc.freq(400);
     osc.amp(0);
     osc.start();
     oscs.push(osc);
