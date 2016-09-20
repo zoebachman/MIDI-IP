@@ -5,34 +5,32 @@
 
 
 //var notes1 = [60, 64, 67, 72];
-var notes1 = [194, 132, 197, 147];
+var notes = [194, 132, 197, 147];
+
+//declare array of oscillators
+var oscs = [];
+
+//number of oscillators
+var numOscs = 4;
 
 // var value = 25;
 //     var m = map(value, 0, 100, 0, width);
 //     ellipse(m, 50, 10, 10);
 
 
-//array for holding the mapped values from notes1
+//array for holding the mapped values from notes
 //initialize as empty array
-var mappedValues = [];
+var midis = [];
+var freqs = [];
 
 
 function setup() {
 
+  //initialize oscillators
+  initOscs();
 
-  //remap the values
-  for (var i = 0; i < notes1.length; i++) {
-    //append to the mappedValues array
-    mappedValues.push(map(notes1[i], 0, 256, 21, 108));
-  }
-
-  //m = map(notes1[0], 0, 256, 21, 108);
-  //var i = 0;
-
-  osc = new p5.Oscillator('Triangle');
-  osc.start();
   frameRate(1);
-  
+
 }
 
 // function remap(){
@@ -48,7 +46,42 @@ function setup() {
 
 
 function draw() {
-  //var freq = midiToFreq(m[i]);
-  //osc.freq(freq);
 
+  notes = [random(255), random(255), random(255), random(255)];
+  
+  //clear arrays for midi notes and its frequencies
+  midis = [];
+  freqs = [];
+
+  //remap the values
+  for (var i = 0; i < notes.length; i++) {
+    //append to the mappedValues array
+    midis.push(map(notes[i], 0, 255, 0, 127));
+    freqs.push(midiToFreq(midis[i]));
+  }
+
+
+  updateOscs();
+
+}
+
+function initOscs() {
+
+  for (var i = 0; i < numOscs; i++) {
+    var osc;
+    osc = new p5.Oscillator();
+    osc.setType('sine');
+    osc.freq(440);
+    osc.amp(0);
+    osc.start();
+    oscs.push(osc);
+  }
+
+}
+
+function updateOscs() {
+  for (var i = 0; i < numOscs; i++) {
+    oscs[i].freq(freqs[i]);
+    oscs[i].amp(1 / numOscs);
+  }
 }
