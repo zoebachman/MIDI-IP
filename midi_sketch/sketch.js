@@ -11,24 +11,28 @@ var notes1 = [194, 132, 197, 147];
 //     var m = map(value, 0, 100, 0, width);
 //     ellipse(m, 50, 10, 10);
 
-var mappedValues;
+
+//array for holding the mapped values from notes1
+//initialize as empty array
+var mappedValues = [];
 
 
 function setup() {
-  
-  
+
+
   //remap the values
   for (var i = 0; i < notes1.length; i++) {
-    
+    //append to the mappedValues array
+    mappedValues.push(map(notes1[i], 0, 256, 21, 108));
   }
-  
-  m = map(notes1[0], 0, 256, 21, 108);
-  var i = 0;
+
+  //m = map(notes1[0], 0, 256, 21, 108);
+  //var i = 0;
 
   osc = new p5.Oscillator('Triangle');
   osc.start();
   frameRate(1);
-  console.log(m)
+  
 }
 
 // function remap(){
