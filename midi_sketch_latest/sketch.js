@@ -28,59 +28,69 @@ var notes = [];
 var midis = [];
 var freqs = [];
 
+var loRange = 100;
+var hiRange = 2000;
+
 //declare array of oscillators
 var oscs = [];
 
 //number of oscillators
 var numOscs = 4;
 
+
+var currentMillis = 0;
+var previousMillis = 0;
+var interval = 1000;
+var iPi = 0;
+
 function setup() {
   //initialize oscillators
+    //mapping happens here
+
+  
   initOscs();
   frameRate(100);
 }
 
 function draw() {
 
-  //mapping happens here
-  for (var i = 0; i < ipAddresses.length; i++) {
-    for (var j = 0; j < ipAddresses[i].length; j++) {
-      notes = mappedFreq(j);
-      //console.log(notes); //got notes
-    }
+var currentMillis = millis();
+
+if(currentMillis - previousMillis > interval){
+  
+  iPi = iPi + 1;
+  console.log("click");
+  previousMillis = currentMillis;
+    if(iPi > ipAddresses.length){
+      iPi = 0;
   }
   
-  midis = [];
-  freqs = [];
-  notes = [];
+  initOscs();
+  
+};
 
-  updateOscs();
+
 }
 
-function mappedFreq(x) {
-  midis.push(map(x, 0, 255, 0, 127));
-  freqs.push(midiToFreq(x));
-  freqs.push(map(x, 0, 255, 20, 2000));
 
-  return freqs;
-}
 
 function initOscs() {
 
   for (var i = 0; i < numOscs; i++) {
     var osc;
+    var tempFreq;
     osc = new p5.Oscillator();
-    osc.setType('sine');
-    osc.freq(400);
-    osc.amp(0);
-    osc.start();
-    oscs.push(osc);
+    oscs[i] = osc;
+    oscs[i].setType('sine');
+    
+    tempFreq = map(ipAddresses[iPi][i], 0, 255, loRange, hiRange)
+    
+    oscs[i].freq(tempFreq); //<<<<
+    oscs[i].amp(0);
+    oscs[i].start();
+    oscs[i].amp(1 / numOscs);
+
+    console.log(oscs)
   }
 }
 
-function updateOscs() {
-  for (var i = 0; i < numOscs; i++) {
-    oscs[i].freq(notes[i]);
-    oscs[i].amp(1 / numOscs);
-  }
-}
